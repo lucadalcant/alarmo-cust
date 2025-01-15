@@ -1,4 +1,4 @@
-# alarmo-card <!-- omit in TOC -->
+# alarmo-card-LUCA <!-- omit in TOC -->
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)  
 
 

@@ -534,16 +534,7 @@ var Ue,Re,He=function(e){return function(t,i){void 0!==i?i.addInitializer((funct
         </div>
 
         ${Wt(i)||this._config.keep_keypad_visible?ge`
-              <ha-textfield
-                .value=${this._input}
-                .label=${this.hass.localize("ui.card.alarm_control_panel.code")}
-                ?disabled=${!Wt(i)}
-                @input=${e=>{this._clearCodeError(),this._input=e.target.value,this._setCodeClearTimer()}}
-                @focus=${this._clearCodeError}
-                type="password"
-                id="code_input"
-                .inputmode=${(null===(e=this._alarmoConfig)||void 0===e?void 0:e.code_format)===Ye?"numeric":"text"}
-              ></ha-textfield>
+              
             `:ge``}
         ${!Wt(i)&&!this._config.keep_keypad_visible||(null===(t=this._alarmoConfig)||void 0===t?void 0:t.code_format)!==Ye?ge``:ge`
               <div id="keypad" style="max-width: ${300*this._config.button_scale_keypad}px">
@@ -665,15 +656,6 @@ var Ue,Re,He=function(e){return function(t,i){void 0!==i?i.addInitializer((funct
       }
       .actions alarmo-button {
         margin: 0 8px 8px;
-      }
-      ha-textfield {
-        margin: 8px auto;
-        max-width: 200px;
-        text-align: center;
-        margin-left: calc(50% - 200px / 2);
-      }
-      ha-textfield.error {
-        animation: shake 0.2s ease-in-out 0s 2;
       }
       #keypad {
         display: flex;

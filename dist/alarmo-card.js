@@ -523,26 +523,6 @@ var Ue,Re,He=function(e){return function(t,i){void 0!==i?i.addInitializer((funct
               </ha-button-menu>
             `:""}
 
-        <div class="header">
-          <div class="icon">
-            <alarmo-state-badge
-              .hass=${this.hass}
-              .entity=${this._config.entity}
-              @click=${()=>Ve(this,"hass-more-info",{entityId:this._config.entity})}
-              style="--alarm-state-color: ${(e=>{if(!e||!e.state)return"var(--state-unavailable-color)";const t=e.state;return t==Qe.Disarmed?"var(--state-alarm_control_panel-disarmed-color, var(--state-alarm_control_panel-inactive-color, var(--state-inactive-color)))":Object.values(Qe).includes(t)?`var(--state-alarm_control_panel-${t}-color, var(--state-alarm_control_panel-active-color, var(--state-active-color)))`:"var(--disabled-color, var(--state-inactive-color))"})(i)}"
-            >
-            </alarmo-state-badge>
-          </div>
-          <div class="summary">
-            <div class="name">
-              ${((e,t)=>Bt(t.name)?e.attributes.friendly_name:t.name)(i,this._config)}
-            </div>
-            <div class="state">
-              ${Vt(i,this.hass.localize,this._config)}
-            </div>
-          </div>
-        </div>
-
         ${this._renderWarning()}
 
         <div id="armActions" class="actions">
@@ -672,23 +652,6 @@ var Ue,Re,He=function(e){return function(t,i){void 0!==i?i.addInitializer((funct
         margin: 0px auto;
         padding: 20px 0px;
         box-sizing: border-box;
-      }
-      .header .icon {
-        display: flex;
-        padding-right: 20px;
-      }
-      .header .summary {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-      }
-      .header .name {
-        font-size: 24px;
-        display: flex;
-      }
-      .header .state {
-        font-size: 14px;
-        display: flex;
       }
       .actions {
         margin: 0;

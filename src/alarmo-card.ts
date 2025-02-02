@@ -18,6 +18,7 @@ import {
 import { CardConfig, AlarmoEvent, AlarmoEntity, AlarmoConfig } from './types';
 
 import './alarmo-card-editor';
+import './components/alarmo-state-badge';
 import './components/alarmo-sensor-badge';
 import './components/alarmo-button';
 
@@ -565,6 +566,23 @@ export class AlarmoCard extends SubscribeMixin(LitElement) {
         margin: 0px auto;
         padding: 20px 0px;
         box-sizing: border-box;
+      }
+      .header .icon {
+        display: flex;
+        padding-right: 20px;
+      }
+      .header .summary {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .header .name {
+        font-size: 24px;
+        display: flex;
+      }
+      .header .state {
+        font-size: 14px;
+        display: flex;
       }
       .actions {
         margin: 0;
